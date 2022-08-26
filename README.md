@@ -4,7 +4,7 @@
 
 Contexto: 
 
-El saber con cuanto dinero contamos es algo indispensable para cualquier persona que viva sola o que no tenga ingresos ilimitados ( foraneos >:( ), y tener una herramieneta a la cual nos ayude a saber con cuanto dinero contariamos en que fecha es algo quenos podría ayudar a ahorrar. 
+El saber con cuanto dinero contamos es algo indispensable para cualquier persona que viva sola o que no tenga ingresos ilimitados " foraneos >:( ", y tener una herramieneta a la cual nos ayude a saber con cuanto dinero contariamos en que fecha es algo quenos podría ayudar a ahorrar. 
 
 Pseudocodigo:
 
