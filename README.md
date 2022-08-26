@@ -2,26 +2,24 @@
 
 -
 
-Seleccionar numero de usuarios (1 a 4)
- 
-Ubicar un tablero  de 70 casillas con casillas (amarillas rojas azules)
+Contexto: 
 
-Cada usuario empiza con una casilla 
-Desde i = 1 a 70
+El saber con cuanto dinero contamos es algo indispensable para cualquier persona que viva sola o que no tenga ingresos ilimitados ( foraneos >:( ), y tener una herramieneta a la cual nos ayude a saber con cuanto dinero contariamos en que fecha es algo quenos podría ayudar a ahorrar. 
 
-Casillas en decenas (azules)
-Casillas entre: 12, 37, 56, 62, 79 (roja)
-Las demás (amarillas)
+Pseudocodigo:
 
-Empieza el jugador con jerarquia de posición empezando por el 1,2,3,4 y se repie al llegar al ultimo
+Pedir los ingresos mensuales, los gastos constantes en un mes y los gastos extras
 
-Presionar boton que genere numero aleatorio (1 a 6)
+ingresos mensuales = x
+gastos constantes en un mes = y
+gastos adicionales = z
+Iva = .74
 
-El numero se agrega a la sumatoria que representa el numero de casillas recorridas por el usario
-Sumatoria= Sumatoria + el numero de el dado
+El dinero total de un mes = x-(y*Iva)-z
 
-Si posicion del (jugador = azul) , entonces se suma 5
-Si posicion del (jugador = rojo) , entonces se resta 10
+Pedir el mes del que se quiere saber los futuros ingresos = Meses pedido
 
-Termina turno y empieza el siguiente jugador
+Meses pedido * El dinero total de un mes = Dinero esperado
+
+Dar el resultad o de " Dinero esperado"
 
