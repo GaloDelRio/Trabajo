@@ -50,6 +50,9 @@ if(opcion == "pesos"):
             print(operación2)
         if pregunta=="n":
             print("Gracias por utilizar la aplicación :)")
+            print("Ingreso mensual,Gastos constantes, Gastos adiccinales, Dinero total")
+        lista=[ingreso_mensual,gastos_constante, gastos_adicionales, operación2]
+    print(lista)
             break
 
 elif (opcion == "dolares"):
@@ -66,4 +69,7 @@ elif (opcion == "dolares"):
             print(operación2)
         if pregunta=="n":
             print("Gracias por utilizar la aplicación :)")
+            print("Ingreso mensual,Gastos constantes, Gastos adiccinales, Dinero total")
+        lista=[ingreso_mensual,gastos_constante, gastos_adicionales, operación2]
+    print(lista)
             break
