@@ -1,75 +1,57 @@
 
-from ast import If
+# Variables constantes 
+
+iva=.76 
+lista_cambios=[]
 
 
-iva=.76
-i=0
+# Funciones
 
-def pesos(ingreso_mensual, gastos_constante,gastos_adicionales):
+def ingreso_mensual_total (ingreso_mensual,gastos_constante,gastos_adicionales):
     operacion=ingreso_mensual-(gastos_constante*iva)-gastos_adicionales
-    if operacion > 0:
-        print ("Tienes",operacion, "pesos, te gustaria invertir en NFTEC?")
+    return operacion
+
+def texto_chistoso(resultado):
+    if resultado > 0:
+        print ("Tienes",resultado, "pesos, te gustaria invertir en NFTEC?")
     else:
-        print (("Tienes",operacion,"pesos, eres pobre bienvenido a LATAM"))
+        print (("Tienes",resultado,"pesos, eres pobre bienvenido a LATAM"))
 
-        
-
-def dolares(ingreso_mensual, gastos_constante,gastos_adicionales):
-    operacion=ingreso_mensual-(gastos_constante*iva)-gastos_adicionales
-    if operacion > 0:
-        print ("Tienes",operacion, "pesos, te gustaria invertir en NFTEC?")
-    else:
-        print (("Tienes",operacion,"pesos, eres pobre bienvenido a LATAM"))
-
-def agregar_dinero():
-    operación2=ingreso_mensual-(gastos_constante*iva)-gastos_adicionales
-    while i==0:
-        pregunta=str(input("¿Te gustaría agregar dinero?   y/n"))
+def agregar_ingresos (resultado):
+    i=0
+    pregunta=str(input("¿Te gustaría agregar dinero?   y/n"))
+        while i!=1:
         if pregunta=="y":
-            preguta2=float(input("¿Cuanto dinero te gustaría agregar?"))
-            operación2=operación2+preguta2
-            print(operación2)
-        if pregunta=="n":
-            print("Gracias por utilizar la aplicación :)")
-            break
+            respesta_pregunta=float(input("¿Cuanto dinero te gustaría agregar?"))
+            lista_cambios.append(resultado)
+            resultado=resultado+respesta_pregunta
+            print("Actualmente tienes",resultado)
+            lista_cambios.append(resultado)
+        elif pregunta=="n":
+            print("tu saldo para el mes es de", resultado)
+            print(lista_cambios)
+            i=i+1
+
+def meses ():
+    pregunta2=str(input("¿Te gustaría revisar aguno de los cabios que realizaste?"  y/n))
+    if pregunta2 = "y"
+        print(lista_meses)
+    elif print("Gracias por utilizar el programa")
+        break
+    
 
 
+
+# Menu
 
 opcion = str(input("¿Quieres usar dolares o pesos?"))
 if(opcion == "pesos"):
     ingreso_mensual = float(input("ingresa el ingreso mensual"))
     gastos_constante = float(input("ingresa gastos contantes o servicios del mes"))
     gastos_adicionales = float(input("ingresa gastos adicionales promedio"))
-    pesos(ingreso_mensual, gastos_constante,gastos_adicionales)
-    operación2=ingreso_mensual-(gastos_constante*iva)-gastos_adicionales
-    while i==0:
-        pregunta=str(input("¿Te gustaría agregar dinero?   y/n"))
-        if pregunta=="y":
-            preguta2=float(input("¿Cuanto dinero te gustaría agregar?"))
-            operación2=operación2+preguta2
-            print(operación2)
-        if pregunta=="n":
-            print("Gracias por utilizar la aplicación :)")
-            print("Ingreso mensual,Gastos constantes, Gastos adiccinales, Dinero total")
-        lista=[ingreso_mensual,gastos_constante, gastos_adicionales, operación2]
-    print(lista)
-            break
-
-elif (opcion == "dolares"):
-    ingreso_mensual = int(input("ingresa el ingreso mensual"))
-    gastos_constante = int(input("ingresa gastos contantes o servicios del mes"))
-    gastos_adicionales = int(input("ingresa gastos adicionales promedio"))
-    dolares(ingreso_mensual, gastos_constante,gastos_adicionales)
-    operación2=ingreso_mensual-(gastos_constante*iva)-gastos_adicionales
-    while i==0:
-        pregunta=str(input("¿Te gustaría agregar dinero?   y/n"))
-        if pregunta=="y":
-            preguta2=float(input("¿Cuanto dinero te gustaría agregar?"))
-            operación2=operación2+preguta2
-            print(operación2)
-        if pregunta=="n":
-            print("Gracias por utilizar la aplicación :)")
-            print("Ingreso mensual,Gastos constantes, Gastos adiccinales, Dinero total")
-        lista=[ingreso_mensual,gastos_constante, gastos_adicionales, operación2]
-    print(lista)
-            break
+    resultado=ingreso_mensual_total (ingreso_mensual,gastos_constante,gastos_adicionales)
+    lista_cambios.append(resultado)
+    texto_chistoso(resultado)
+    agregar_ingresos (resultado)
+    lista_meses=["primer mes",resultado],["segundo mes",resultado*2],["tercer mes",resultado*3],["cuarto mes",resultado*4],["quinto mes",resultado*5],["sexto mes",resultado*6]
+    meses()
