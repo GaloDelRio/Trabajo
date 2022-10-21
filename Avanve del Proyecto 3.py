@@ -1,4 +1,3 @@
-
 """
 Proyecto python
 Simulador organizador de finanzas.
@@ -125,5 +124,75 @@ elif (opcion == "dolares"):
 
 
     lista_meses=[["primer mes",resultado],["segundo mes",resultado*2],["tercer mes",resultado*3],["cuarto mes",resultado*4],["quinto mes",resultado*5],["sexto mes",resultado*6]]
+
+"""
+
+============================ Error 1 =====================================
+
+
+Sub-Competencia: 
+	componente: usa la forma más a apropiada al problema para guardar los datos (listas, variable, tipo de dato, etc...) (avance 6)  (listas)
+
+Error original: Solo imprimia una lista en vez de hacer algo con la misma
+
+	lista de cambio=[]:
+		print (lista de cambios) 
+
+Cambio realizado: utile las listas con otras aplicaciones
+
+	i=1
+    pregunta = input("¿Te gustaría agregar dinero?   y/n \n")
+    while i==1:
+        if pregunta=="y":
+            respuesta_pregunta=float(input("¿Cuanto dinero te gustaría agregar? \n"))
+            resultado=resultado+respuesta_pregunta
+            lista_cambios.append(resultado)
+            print("Actualmente tienes",resultado)
+            pregunta = str(input("¿Te gustaría seguir agregando dinero?   y/n \n"))
+        elif pregunta=="n":
+            print("tu saldo para el mes es de", resultado)
+            i=i+1
     
+pregunta2=str(input("¿Te gustaría revisar alguno de los cambios que realizaste?  y/n \n"))
+    if pregunta2 == "y":
+        print(lista_cambios)
+
+
+Líneas de código donde se ve la corrección: 66 a 85 y 87 a 98
+
+============================ Error 2 =====================================
+
+
+Sub-Competencia: 
+	Aplica funciones de manera adecuada para segmentar el código y mantener reusabilidad y modularidad (avance 2)
+
+Error original: "Observaciones:
+el Menu no esta biene estructurado.
+"			
+
+Cambio realizado: agrege el comparativo dolares además de ajustar las funciones
+    if(opcion == "pesos"):
+        ingreso_mensual = float(input(f"ingresa el ingreso mensual: \n"))
+        gastos_constante = float(input(f"ingresa gastos contantes o servicios del mes: \n"))
+        gastos_adicionales = float(input(f"ingresa gastos adicionales promedio: \n"))
+        resultado=ingreso_mensual_total (ingreso_mensual,gastos_constante,gastos_adicionales)
+        lista_cambios.append(resultado)
+        texto_chistoso(resultado)
+        agregar_ingresos (resultado)
+        cambios(lista_cambios)
+        meses(resultado)
+	elif (opcion == "dolares"):
+        ingreso_mensual = float(input(f"ingresa el ingreso mensual: \n"))
+        gastos_constante = float(input(f"ingresa gastos contantes o servicios del mes: \n"))
+        gastos_adicionales = float(input(f"ingresa gastos adicionales promedio: \n"))
+        resultado=ingreso_mensual_total (ingreso_mensual,gastos_constante,gastos_adicionales)
+        lista_cambios.append(resultado)
+        texto_chistoso(resultado)
+        agregar_ingresos (resultado)
+        cambios(lista_cambios)
+        meses(resultado)
+
+Líneas de código donde se ve la corrección: 105 a 125
+
+   """     
 
